@@ -1,0 +1,55 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "lint": "eslint 'src/**/*.js'",
+    "lint:fix": "eslint 'src/**/*.js' --fix",
+    "flow": "flow"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-flow": "7.10.4",
+    "@babel/preset-react": "7.10.4",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "css-loader": "4.3.0",
+    "eslint": "7.9.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-config-react-app": "5.2.1",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.6",
+    "eslint-plugin-react-hooks": "4.1.2",
+    "flow-bin": "0.124.0",
+    "html-loader": "1.3.0",
+    "html-webpack-plugin": "4.4.1",
+    "husky": "^4.3.0",
+    "prettier": "2.1.2",
+    "react-hot-loader": "^4.12.21",
+    "sass": "1.26.11",
+    "sass-loader": "10.0.2",
+    "style-loader": "1.2.1",
+    "webpack": "4.44.2",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn flow && yarn lint"
+    }
+  }
+}
