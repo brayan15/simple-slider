@@ -1,52 +1,210 @@
 // @flow
 import React from 'react'
-import { Slider, SliderItem, SliderCaption, SliderTitle, SliderDescription } from '../src/sharedComponents/slider'
 import { storiesOf } from '@storybook/react'
-// import '../src/styles/main.scss'
+import {
+  Slider,
+  SliderItem,
+  SliderTitle,
+  SliderCaption,
+  SliderDescription
+} from '../src/sharedComponents/slider'
 
-storiesOf('Slider', module).add('Default', () => (
-  <Slider infitieLoop>
-    <SliderItem>
-      <SliderTitle>
-        <h2>title 1</h2>
-      </SliderTitle>
-      <SliderDescription offset>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-      </SliderDescription>
-      <SliderCaption>
-        <p>caption 1</p>
-      </SliderCaption>
-    </SliderItem>
-    <SliderItem>
-      <SliderTitle>
-        <h2>title 2</h2>
-      </SliderTitle>
-      <SliderDescription offset>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-        <p>some content be here now</p>
-      </SliderDescription>
-      <SliderCaption>
-        <p>caption 1</p>
-      </SliderCaption>
-    </SliderItem>
-  </Slider>
-))
+storiesOf('Slider', module)
+  .add('Default', () => (
+    <Slider>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 1</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 1</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 2</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 2</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 3</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 3</p>
+        </SliderCaption>
+      </SliderItem>
+    </Slider>
+  ))
+  .add('InfinitiLoop', () => (
+    <Slider infitieLoop>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 1</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 1</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 2</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 2</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle>
+          <h2>title 3</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption>
+          <p>caption 3</p>
+        </SliderCaption>
+      </SliderItem>
+    </Slider>
+  ))
+  .add('Uppercase title and caption and infinitilopp', () => (
+    <Slider infitieLoop>
+      <SliderItem>
+        <SliderTitle uppercase>
+          <h2>title 1</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption uppercase>
+          <p>caption 1</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle uppercase>
+          <h2>title 2</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption uppercase>
+          <p>caption 2</p>
+        </SliderCaption>
+      </SliderItem>
+      <SliderItem>
+        <SliderTitle uppercase>
+          <h2>title 3</h2>
+        </SliderTitle>
+        <SliderDescription offset>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+          <p>some content be here now</p>
+        </SliderDescription>
+        <SliderCaption uppercase>
+          <p>caption 3</p>
+        </SliderCaption>
+      </SliderItem>
+    </Slider>
+  ))
+  .add('Light', () => (
+    <div style={{ background: 'black'}}>
+      <Slider infitieLoop>
+        <SliderItem>
+          <SliderTitle uppercase light>
+            <h2>title 1</h2>
+          </SliderTitle>
+          <SliderDescription offset light>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+          </SliderDescription>
+          <SliderCaption uppercase light>
+            <p>caption 1</p>
+          </SliderCaption>
+        </SliderItem>
+        <SliderItem>
+          <SliderTitle uppercase light>
+            <h2>title 2</h2>
+          </SliderTitle>
+          <SliderDescription offset light>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+          </SliderDescription>
+          <SliderCaption uppercase light>
+            <p>caption 2</p>
+          </SliderCaption>
+        </SliderItem>
+        <SliderItem>
+          <SliderTitle uppercase light>
+            <h2>title 3</h2>
+          </SliderTitle>
+          <SliderDescription offset light>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+            <p>some content be here now</p>
+          </SliderDescription>
+          <SliderCaption uppercase light>
+            <p>caption 3</p>
+          </SliderCaption>
+        </SliderItem>
+      </Slider>
+    </div>
+  ))

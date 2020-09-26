@@ -16,19 +16,17 @@ const Slider = (props: PropsT) => {
   const [swiping, setSwiping] = React.useState(false)
 
   const goToPrevSlide = () => {
-    if(activeIndex < 1 && props.infitieLoop) {
+    if (activeIndex < 1 && props.infitieLoop) {
       setActiveIndex(props.children.length - 1)
-    }
-    else {
+    } else {
       setActiveIndex(activeIndex - 1)
     }
   }
 
   const goToNextSlide = () => {
-    if(activeIndex === props.children.length - 1 && props.infitieLoop) {
+    if (activeIndex === props.children.length - 1 && props.infitieLoop) {
       setActiveIndex(0)
-    }
-    else {
+    } else {
       setActiveIndex(activeIndex + 1)
     }
   }
@@ -53,7 +51,10 @@ const Slider = (props: PropsT) => {
     // if swipe is greater than min distance it means slider going to do slide
     if (swiping && absX > minDistance) {
       // Go to next slide
-      if (swipe > touch.clientX && (activeIndex !== props.children.length - 1 || props.infitieLoop)) {
+      if (
+        swipe > touch.clientX &&
+        (activeIndex !== props.children.length - 1 || props.infitieLoop)
+      ) {
         goToNextSlide()
       }
 
@@ -71,20 +72,29 @@ const Slider = (props: PropsT) => {
   return (
     <div className='slider' onTouchStart={touchStart} onTouchMove={touchMove} onTouchEnd={touchEnd}>
       {props.children.map((child, index) => (
-        <div className={`slider__item-wrapper fade ${index === activeIndex ? 'slider__item-wrapper--active' : ''}`} key={index}>
+        <div
+          key={index}
+          className={`slider__item-wrapper fade ${
+            index === activeIndex ? 'slider__item-wrapper--active' : ''
+          }`}
+        >
           {child}
         </div>
       ))}
       <div className='slider__controls'>
         {activeIndex !== 0 || props.infitieLoop ? (
           <div className='slider__prev-arrow' onClick={goToPrevSlide}>
-            <img src={prevIcon} alt='prev icon' className='img' />
+            <div className='slider__next-arrow-icon-wrapper'>
+              <img src={prevIcon} alt='prev icon' className='slider__prev-arrow-icon' />
+            </div>
           </div>
         ) : null}
 
         {activeIndex !== props.children.length - 1 || props.infitieLoop ? (
           <div className='slider__next-arrow' onClick={goToNextSlide}>
-            <img src={nextIcon} alt='next icon' className='img' />
+            <div className='slider__next-arrow-icon-wrapper'>
+              <img src={nextIcon} alt='next icon' className='slider__next-arrow-icon' />
+            </div>
           </div>
         ) : null}
       </div>
@@ -92,7 +102,7 @@ const Slider = (props: PropsT) => {
   )
 }
 
-Slider.defaultProps= {
+Slider.defaultProps = {
   infitieLoop: false
 }
 
