@@ -3,13 +3,15 @@ import * as React from 'react'
 
 type PropsT = {
   light: boolean,
+  className?: string,
   offset: boolean,
   children: React.Node
 }
 
 const SliderDescription = (props: PropsT) => (
   <div
-    className={`slider__item-description ${props.offset ? 'p-y-4 p-x-3' : ''} ${
+  // $FlowFixMe
+    className={`slider__item-description ${props.className} ${props.offset ? 'p-y-4 p-x-3' : ''} ${
       props.light ? 'slider__item-description--light' : ''
     }`}
   >
@@ -18,8 +20,9 @@ const SliderDescription = (props: PropsT) => (
 )
 
 SliderDescription.defaultProps = {
+  light: false,
   offset: false,
-  light: false
+  className: ''
 }
 
 export default SliderDescription

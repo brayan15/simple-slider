@@ -3,15 +3,17 @@ import * as React from 'react'
 
 type PropsT = {
   light?: boolean,
+  className?: string,
   uppercase?: boolean,
   children: React.Node
 }
 
 const SliderCaption = (props: PropsT) => (
   <div
-    className={`slider__item-caption ${props.light ? 'slider__item-caption--light' : ''} ${
-      props.uppercase ? 'slider__item-caption--uppercase' : ''
-    }`}
+  // $FlowFixMe
+    className={`slider__item-caption ${props.className} ${
+      props.light ? 'slider__item-caption--light' : ''
+    } ${props.uppercase ? 'slider__item-caption--uppercase' : ''}`}
   >
     {props.children}
   </div>
@@ -19,6 +21,7 @@ const SliderCaption = (props: PropsT) => (
 
 SliderCaption.defaultsProps = {
   light: false,
+  className: '',
   uppercase: false
 }
 

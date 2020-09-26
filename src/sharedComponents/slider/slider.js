@@ -4,6 +4,7 @@ import prevIcon from '../../statics/prev-icon.png'
 import nextIcon from '../../statics/next-icon.png'
 
 type PropsT = {
+  className?: string,
   infitieLoop?: boolean,
   children: Array<React.Node>
 }
@@ -67,10 +68,14 @@ const Slider = (props: PropsT) => {
     setSwiping(false)
   }
 
-  //add a description text on carousel if user wnat the slider be a text carousel
-
   return (
-    <div className='slider' onTouchStart={touchStart} onTouchMove={touchMove} onTouchEnd={touchEnd}>
+    <div
+      onTouchEnd={touchEnd}
+      onTouchMove={touchMove}
+      onTouchStart={touchStart}
+      // $FlowFixMe
+      className={`slider ${props.className}`}
+    >
       {props.children.map((child, index) => (
         <div
           key={index}
@@ -103,6 +108,7 @@ const Slider = (props: PropsT) => {
 }
 
 Slider.defaultProps = {
+  className: '',
   infitieLoop: false
 }
 
