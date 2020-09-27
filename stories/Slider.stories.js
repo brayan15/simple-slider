@@ -59,8 +59,8 @@ storiesOf('Slider', module)
       </SliderItem>
     </Slider>
   ))
-  .add('InfinitiLoop', () => (
-    <Slider infitieLoop>
+  .add('InfiniteLoop', () => (
+    <Slider infiniteLoop>
       <SliderItem>
         <SliderTitle>
           <h2>title 1</h2>
@@ -108,8 +108,8 @@ storiesOf('Slider', module)
       </SliderItem>
     </Slider>
   ))
-  .add('Uppercase title and caption and infinitilopp', () => (
-    <Slider infitieLoop>
+  .add('Uppercase title and caption and infiniteLoop', () => (
+    <Slider infiniteLoop>
       <SliderItem>
         <SliderTitle uppercase>
           <h2>title 1</h2>
@@ -159,7 +159,7 @@ storiesOf('Slider', module)
   ))
   .add('Light', () => (
     <div style={{ background: 'black'}}>
-      <Slider infitieLoop>
+      <Slider infiniteLoop>
         <SliderItem>
           <SliderTitle uppercase light>
             <h2>title 1</h2>

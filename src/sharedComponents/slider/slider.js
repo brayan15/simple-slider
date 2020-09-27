@@ -5,7 +5,7 @@ import nextIcon from '../../statics/next-icon.png'
 
 type PropsT = {
   className?: string,
-  infitieLoop?: boolean,
+  infiniteLoop?: boolean,
   children: Array<React.Node>
 }
 
@@ -17,7 +17,7 @@ const Slider = (props: PropsT) => {
   const [swiping, setSwiping] = React.useState(false)
 
   const goToPrevSlide = () => {
-    if (activeIndex < 1 && props.infitieLoop) {
+    if (activeIndex < 1 && props.infiniteLoop) {
       setActiveIndex(props.children.length - 1)
     } else {
       setActiveIndex(activeIndex - 1)
@@ -25,7 +25,7 @@ const Slider = (props: PropsT) => {
   }
 
   const goToNextSlide = () => {
-    if (activeIndex === props.children.length - 1 && props.infitieLoop) {
+    if (activeIndex === props.children.length - 1 && props.infiniteLoop) {
       setActiveIndex(0)
     } else {
       setActiveIndex(activeIndex + 1)
@@ -54,13 +54,13 @@ const Slider = (props: PropsT) => {
       // Go to next slide
       if (
         swipe > touch.clientX &&
-        (activeIndex !== props.children.length - 1 || props.infitieLoop)
+        (activeIndex !== props.children.length - 1 || props.infiniteLoop)
       ) {
         goToNextSlide()
       }
 
       // Go to prev slide
-      if (swipe < touch.clientX && (activeIndex !== 0 || props.infitieLoop)) {
+      if (swipe < touch.clientX && (activeIndex !== 0 || props.infiniteLoop)) {
         goToPrevSlide()
       }
     }
@@ -87,7 +87,7 @@ const Slider = (props: PropsT) => {
         </div>
       ))}
       <div className='slider__controls'>
-        {activeIndex !== 0 || props.infitieLoop ? (
+        {activeIndex !== 0 || props.infiniteLoop ? (
           <div className='slider__prev-arrow' onClick={goToPrevSlide}>
             <div className='slider__next-arrow-icon-wrapper'>
               <img src={prevIcon} alt='prev icon' className='slider__prev-arrow-icon' />
@@ -95,7 +95,7 @@ const Slider = (props: PropsT) => {
           </div>
         ) : null}
 
-        {activeIndex !== props.children.length - 1 || props.infitieLoop ? (
+        {activeIndex !== props.children.length - 1 || props.infiniteLoop ? (
           <div className='slider__next-arrow' onClick={goToNextSlide}>
             <div className='slider__next-arrow-icon-wrapper'>
               <img src={nextIcon} alt='next icon' className='slider__next-arrow-icon' />
@@ -109,7 +109,7 @@ const Slider = (props: PropsT) => {
 
 Slider.defaultProps = {
   className: '',
-  infitieLoop: false
+  infiniteLoop: false
 }
 
 export default Slider

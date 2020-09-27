@@ -10,7 +10,7 @@ import {
 } from './sharedComponents/slider'
 
 const App = () => (
-  <Slider infitieLoop>
+  <Slider infiniteLoop>
     <SliderItem>
       <SliderTitle uppercase>
         <h2>title 1</h2>

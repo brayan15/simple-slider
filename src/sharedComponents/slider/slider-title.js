@@ -13,7 +13,7 @@ const SliderTitle = (props: PropsT) => (
   // $FlowFixMe
     className={`slider__item-title ${props.className} ${
       props.light ? 'slider__item-title--light' : ''
-    } ${props.uppercase ? 'slider__item-caption--uppercase' : ''}`}
+    } ${props.uppercase ? 'slider__item-title--uppercase' : ''}`}
   >
     {props.children}
   </div>

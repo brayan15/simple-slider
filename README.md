@@ -35,7 +35,7 @@ import {
 } from './sharedComponents/slider'
 
 const App = () => (
-  <Slider infitieLoop>
+  <Slider infiniteLoop>
     <SliderItem>
       <SliderTitle uppercase>
         <h2>title 1</h2>
@@ -150,7 +150,11 @@ In the project directory, you can run:
     Runs `flow`, flow is a static type checker for your JavaScript code. It lets you annotate the variables, functions, and React components with a special type syntax, and catch mistakes early.
     Flow allows us to easily add static type checking to our JavaScript. Flow will help you prevent bugs and allow for better code documentation among other things.
 
-7. #### `$ yarn storybook`
+7. #### `$ yarn test`
+
+    Runs `test`. Launches the test runner in the interactive watch mode.
+
+8. #### `$ yarn storybook`
 
     Runs `storybook`, storybook is an open source tool for developing UI components, it provides a sandbox to build UI components in isolation so you can develop hard-to-reach states and edge cases.
 
