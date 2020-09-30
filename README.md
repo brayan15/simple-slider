@@ -4,7 +4,7 @@ Simple component to create a slider easily, accepts any type of html or jsx cont
 
 1. Installs all the dependencies necessary to run the project
     ```
-    $ yarn add
+    $ yarn
     ```
 
 2. Runs project
@@ -117,7 +117,7 @@ const App = () => (
 
 In the project directory, you can run:
 
-1. #### `$ yarn add`
+1. #### `$ yarn`
 
     Installs all the dependencies necessary to run the project
 
